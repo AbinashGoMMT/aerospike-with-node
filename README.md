@@ -8,11 +8,11 @@ The server folder architecture can be changed based on requirement of applicatio
 for auto fixing eslint errors in code.
 
 Modules folder can be like the following:
-/upload : /uploadModel
-          /uploadHandler
-          /uploadRouter
-/post :   /postModel
-          /postHandler
-          /postRouter
+* /upload : /uploadModel
+            /uploadHandler
+            /uploadRouter
+* /post :   /postModel
+            /postHandler
+            /postRouter
           
 Logical separation of apis and respective models + handlers for easier browsing through the application
