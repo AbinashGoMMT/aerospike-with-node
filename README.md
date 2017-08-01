@@ -6,3 +6,13 @@ The server folder architecture can be changed based on requirement of applicatio
 * Install eslint extension on VS Code and enable following setting in user settings
 "eslint.autoFixOnSave": true
 for auto fixing eslint errors in code.
+
+Modules folder can be like the following:
+/upload : /uploadModel
+          /uploadHandler
+          /uploadRouter
+/post :   /postModel
+          /postHandler
+          /postRouter
+          
+Logical separation of apis and respective models + handlers for easier browsing through the application
