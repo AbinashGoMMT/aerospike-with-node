@@ -16,3 +16,5 @@ Modules folder can be like the following:
             /postRouter
           
 Logical separation of apis and respective models + handlers for easier browsing through the application
+
+Uncomment Import 'babel-polyfill' while running build file, polyfill required for async/await. Comment otherwise during normal dev
