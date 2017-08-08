@@ -7,7 +7,8 @@ export default (app) => {
             // res.status(500).send({ error: err, message: err.message });
         });
     } else {
-        app.use((err, req, res) => {
+        // error handling middleware must take four param method signature
+        app.use((err, req, res, next) => {
             res.status(500).send(err.message);
         });
     }
