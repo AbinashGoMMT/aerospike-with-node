@@ -32,6 +32,18 @@ dbHandler.openConnection().then(() => {
     });
 });
 
+// for process kill signal only on windows
+if (process.platform === "win32") {
+    var rl = require('readline').createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    rl.on("SIGINT", function() {
+        process.emit("SIGINT");
+    });
+}
+
 // kill process when Ctrl+C is hit
 process.on('SIGINT', () => {
     console.log('bye bye !');
