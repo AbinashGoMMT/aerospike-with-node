@@ -1,11 +1,11 @@
 // import 'babel-polyfill';
 
 // ========================== custom modules ==========================
-import { dev } from './config';
+import { dev } from './config.json';
 import routes from './routes';
 import errHandler from './handlers/errorHandler';
 import dbHandler from './handlers/dbHandler';
-
+import asHandler from './handlers/asHandler';
 // ========================== dependecy modules ==========================
 import bodyParser from 'body-parser';
 import express from 'express';
@@ -25,16 +25,17 @@ routes(app);
 errHandler(app);
 
 // open db connection, when successful start application
-dbHandler.openConnection().then(() => {
-    app.listen(dev.PORT, () => {
-        console.log(`server started ${dev.PORT} `);
-        console.log(`Worker ${process.pid} started `);
-    });
+// dbHandler.openConnection().then(() => {
+console.log(dev.PORT);
+app.listen(dev.PORT, () => {
+    console.log(`server started ${dev.PORT} `);
+    console.log(`Worker ${process.pid} started `);
 });
+// });
 
 // for process kill signal only on windows
 if (process.platform === "win32") {
-    var rl = require('readline').createInterface({
+    const rl = require('readline').createInterface({
         input: process.stdin,
         output: process.stdout
     });
@@ -48,6 +49,7 @@ if (process.platform === "win32") {
 process.on('SIGINT', () => {
     console.log('bye bye !');
     dbHandler.closeConnection(() => {
+        asHandler.closeConnection();
         process.exit();
     });
 });

@@ -14,7 +14,16 @@ Modules folder can be like the following:
 * /post :   /postModel
             /postHandler
             /postRouter
-          
+
 Logical separation of apis and respective models + handlers for easier browsing through the application
 
 Uncomment Import 'babel-polyfill' while running build file, polyfill required for async/await. Comment otherwise during normal dev
+
+
+Pre-requisites: aerospike local setup, url used in config json is from local setup
+
+To get started:
+
+npm install
+npm start
+

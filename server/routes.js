@@ -3,7 +3,7 @@ const router = express.Router();
 
 // import all custom router objects
 const routes = [
-    require('./modules/moduleName/moduleNameRouter')
+    require('./modules/pathfinder/pathfinderRouter')
 ];
 
 export default (app) => {

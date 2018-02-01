@@ -1,0 +1,24 @@
+{
+    "dev": {
+        "PORT": 4000,
+        "dbUrl": {
+            "localDBUrl": "",
+            "mongoAtlasUrl": "",
+            "aerospikeUrl": "172.28.128.3:3000"
+        }
+    },
+    "qa": {
+        "PORT": "",
+        "dbUrl": {
+            "localDBUrl": "",
+            "mongoAtlasUrl": ""
+        }
+    },
+    "prod": {
+        "PORT": "",
+        "dbUrl": {
+            "localDBUrl": "",
+            "mongoAtlasUrl": ""
+        }
+    }
+}

@@ -24,6 +24,7 @@
     "author": "Abinash Patra",
     "license": "ISC",
     "dependencies": {
+        "aerospike": "^3.1.1",
         "body-parser": "^1.17.2",
         "cluster": "^0.7.7",
         "express": "^4.15.3",
@@ -31,8 +32,10 @@
         "os": "^0.1.1"
     },
     "devDependencies": {
+        "babel-cli": "^6.26.0",
         "babel-eslint": "^7.2.3",
         "babel-polyfill": "^6.23.0",
+        "babel-preset-env": "^1.6.1",
         "babel-preset-es2015": "^6.24.1",
         "babel-preset-stage-0": "^6.24.1",
         "eslint": "^4.0.0",
